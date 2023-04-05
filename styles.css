@@ -1,0 +1,52 @@
+*{
+    background-color: #000000;
+    box-sizing: border-box;
+}
+
+.everything{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1080px;
+    width: 100%;
+}
+
+.wordle-container{
+    background-color: #ffffff;
+    height: 1000px;
+    width: 1000px;
+}
+
+.message{
+    height: 200px;
+    width: 196px;
+    background-color: #ffffff;
+    font-size: 1000%;
+    text-align: center;
+}
+
+.row1,.row2,.row3,.row4,.row5{
+     background-color: #000000;
+}
+
+.user-text{
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+    font-size: 75px;
+}
+
+.user-container{
+    display: flex;
+    justify-content: center;
+}
+
+.user-button{
+    margin-left:20px;
+    background-color: #59c8ff;
+    height: 100px;
+    width:200px;
+    border-radius: 15px;
+}
