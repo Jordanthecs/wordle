@@ -28,14 +28,14 @@ guessButton.addEventListener('click',function(){
     }else{
         for(let i = 0;i<5;i++){
             document.querySelector(`#m${row}-${i}`).value = userGuess.value.split('')[i];
-            console.log(row+' '+i);
+            if(document.querySelector(`#m${row}-${i}`).value === wordToGuess[i]){
+                document.querySelector(`#m${row}-${i}`).style.backgroundColor = 'green';
+            }
+            }
         }
         if(userGuess.value !== wordToGuess){
             console.log('L')
         }
         row++;
-    }
-
-
     
 });
