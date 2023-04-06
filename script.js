@@ -1,6 +1,6 @@
 let guessButton = document.querySelector('.user-button');
 let userGuess = document.querySelector('.user-text');
-let count = 0;let row = 0;
+let row = 0;
 let randWord;
 
 function readTextFile(file){
@@ -30,12 +30,27 @@ guessButton.addEventListener('click',function(){
             document.querySelector(`#m${row}-${i}`).value = userGuess.value.split('')[i];
             if(document.querySelector(`#m${row}-${i}`).value === wordToGuess[i]){
                 document.querySelector(`#m${row}-${i}`).style.backgroundColor = 'green';
-            }
+                document.querySelector(`#m${row}-${i}`).style.color = 'white';
             }
         }
+        for(let i = 0;i<5;i++){
+            for(let j = 0;j<5;j++){
+                if(document.querySelector(`#m${row}-${i}`).style.backgroundColor !== 'green'){
+                    if(document.querySelector(`#m${row}-${i}`).value === wordToGuess[j]){
+                        document.querySelector(`#m${row}-${i}`).style.backgroundColor = 'yellow';
+                    }
+                }
+            }
+        }
+    }
+    setTimeout(function(){
         if(userGuess.value !== wordToGuess){
-            console.log('L')
+            console.log('L');
+        }else{
+            alert('YOU WIN!');
         }
-        row++;
+        userGuess.value = '';
+    },500);
+    row++;
     
 });
